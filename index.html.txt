@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Velvet Bean - Unparalleled Coffee Experiences</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load elegant fonts: Playfair Display (Serif) and Montserrat (Sans-serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom scrollbar for a more refined look */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #D4AF37; /* Gold accent */
+            border-radius: 4px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #101c18; /* Deep emerald background */
+        }
+        /* Custom class for subtle hover effect */
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(212, 175, 55, 0.2);
+        }
+        /* Custom hero background style */
+        .hero-bg {
+            /* Updated with the Luxurious Interior View Image */
+            background-image: url('https://www.shutterstock.com/image-photo/penang-malaysia-15-mar-2021-260nw-1939550107.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        /* Hide default date/time picker icon */
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(1); /* Makes the icon visible on dark background */
+        }
+    </style>
+    <script>
+        // Tailwind configuration to include custom fonts
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#064e3b', // Deep Emerald Green
+                        'accent-gold': '#D4AF37', // Muted Gold/Bronze
+                        'off-white': '#f5f5f5', // Creamy White
+                        'body-bg': '#101c18', // Matte Black/Very Dark Green
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'], // Headings
+                        sans: ['Montserrat', 'sans-serif'],     // Main Text
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<!-- यहाँ 'style' एट्रीब्यूट जोड़ा गया है ताकि बैकग्राउंड कलर तुरंत सेट हो जाए -->
+<body class="bg-body-bg font-sans text-off-white" style="background-color: #101c18 !important;">
+
+    <!-- Custom Message Box -->
+    <div id="message-box" class="fixed top-4 right-4 transition-all duration-300 transform translate-x-full z-[100]">
+        <p id="message-text" class="font-sans"></p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-body-bg/90 backdrop-blur-sm shadow-xl border-b border-accent-gold/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-serif font-light tracking-widest text-accent-gold transition duration-300 hover:text-white">
+                THE VELVET BEAN
+            </a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#story" class="text-sm uppercase tracking-wider transition duration-300 hover:text-accent-gold">Our Heritage</a>
+                <a href="#menu" class="text-sm uppercase tracking-wider transition duration-300 hover:text-accent-gold">Menu</a>
+                <a href="#tea-ritual" class="text-sm uppercase tracking-wider transition duration-300 hover:text-accent-gold">The Tea Ritual</a>
+                <a href="#pastries" class="text-sm uppercase tracking-wider transition duration-300 hover:text-accent-gold">Artisanal Pastries</a>
+                <a href="#ambiance" class="text-sm uppercase tracking-wider transition duration-300 hover:text-accent-gold">Gallery</a>
+                <a href="#reserve" class="text-sm uppercase tracking-wider border-b border-transparent hover:border-accent-gold transition duration-300">Reservation</a>
+            </div>
+            <!-- Mobile Menu Placeholder -->
+            <button class="md:hidden text-2xl text-accent-gold">
+                &#9776;
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero-bg h-screen flex items-center justify-center text-center">
+            <div class="bg-body-bg/60 p-8 md:p-16 rounded-xl shadow-2xl max-w-4xl mx-4">
+                <h1 class="text-5xl md:text-8xl font-serif font-extralight tracking-tight mb-4 text-white">
+                    The Velvet Bean
+                </h1>
+                <p class="text-lg md:text-2xl font-sans font-thin tracking-widest uppercase text-accent-gold">
+                    Where Time Stays Still, and Coffee is Supreme.
+                </p>
+                <div class="mt-8">
+                    <a href="#reserve" class="inline-block px-8 py-3 text-lg font-medium tracking-widest uppercase border border-accent-gold text-accent-gold rounded-lg transition duration-500 hover:bg-accent-gold hover:text-body-bg hover-lift">
+                        Book Your Exclusive Experience
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story (Our Heritage) -->
+        <section id="story" class="py-24 md:py-32 max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Asymmetrical Image Block -->
+                <div class="order-2 lg:order-1 relative p-4 bg-primary-dark/50 rounded-xl">
+                    <div class="w-full h-96 md:h-[500px] overflow-hidden rounded-xl shadow-lg">
+                        <!-- Founder Portrait Placeholder -->
+                        <img src="https://ideogram.ai/assets/progressive-image/balanced/response/wCQeOPfPRdSHW-VUeOKPJQ" alt="Portrait of the Founder" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+
+                <!-- Content Block -->
+                <div class="order-1 lg:order-2 space-y-8">
+                    <h2 class="text-4xl md:text-6xl font-serif font-light mb-4 text-white border-l-4 border-accent-gold pl-4">
+                        A Heritage of Craft
+                    </h2>
+                    <blockquote class="text-xl italic font-serif text-off-white/80 border-l-2 border-off-white pl-6">
+                        "Our dedication is not merely to the brew, but to the seamless blend of heritage and modernity. Every cup is a curated narrative."
+                    </blockquote>
+                    <p class="text-lg font-sans leading-relaxed text-off-white/70">
+                        The Velvet Bean was founded on a singular philosophy: that the pursuit of tranquility and the ritual of coffee are one and the same. Our founder, driven by a deep respect for artisanal sourcing, travelled the world to hand-select rare, single-origin beans. This is more than just a café; it is an exclusive sanctuary where every detail, from the ambient lighting to the texture of the velvet seating, is considered.
+                    </p>
+                    <p class="text-lg font-sans leading-relaxed text-off-white/70">
+                        We celebrate slow luxury, inviting you to pause, truly linger, and experience the dedication of craft in every exquisite moment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Overview -->
+        <section id="menu" class="py-24 md:py-32 bg-primary-dark max-w-full">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-4xl md:text-6xl font-serif font-extralight mb-4 text-accent-gold">
+                    Curated Menu
+                </h2>
+                <p class="text-lg font-sans text-off-white/70 mb-12">
+                    A collection of the world's finest elements, meticulously prepared. Explore our coffee, tea, and confectionery selections below.
+                </p>
+
+                <!-- Coffee Item Grid -->
+                <h3 class="text-3xl font-serif font-light mt-16 mb-8 text-white">Our Signature Coffees</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Item 1: The Equatorial Reserve -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-body-bg border border-accent-gold/10 hover-lift transition duration-500">
+                        <div class="h-64 overflow-hidden">
+                            <!-- Geisha Pour Over -->
+                            <img src="https://ideogram.ai/assets/progressive-image/balanced/response/uytw3QmPQo2Xj9Zb-roGvw" alt="Geisha Coffee" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-3xl font-serif font-medium text-white">The Equatorial Reserve</h4>
+                            <p class="text-sm uppercase tracking-widest text-accent-gold">Exclusive Coffee Experience</p>
+                            <p class="text-off-white/70">
+                                An experience of rarity and distinction. This Geisha varietal originates from a single, meticulously preserved estate in Panama. It is prepared with pure precision by our Master Brewer, offering delicate notes of jasmine, zest of bergamot, and a velvety finish.
+                            </p>
+                            <p class="text-xl font-serif italic pt-2">— Served in hand-blown glass.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: The Midnight Espresso -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-body-bg border border-accent-gold/10 hover-lift transition duration-500">
+                        <div class="h-64 overflow-hidden">
+                            <!-- Dark Rich Espresso Shot -->
+                            <img src="https://ideogram.ai/assets/progressive-image/balanced/response/Cq72AWBgS2K9lC_UeznMTw" alt="Artisanal Espresso" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-3xl font-serif font-medium text-white">The Midnight Espresso</h4>
+                            <p class="text-sm uppercase tracking-widest text-accent-gold">Focused Craft</p>
+                            <p class="text-off-white/70">
+                                A blend of heirloom varietals, slow-roasted for a perfect, rich saturation. Extracted under high pressure, this shot offers a deep crema and notes of cocoa, dark cherry, and smoke. The essence of concentration.
+                            </p>
+                            <p class="text-xl font-serif italic pt-2">— Served in miniature porcelain.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Smoked Salmon Royale -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-body-bg border border-accent-gold/10 hover-lift transition duration-500">
+                        <div class="h-64 overflow-hidden">
+                            <!-- Smoked Salmon and Caviar Brioche -->
+                            <img src="https://cdn.leonardo.ai/users/187581d2-9eda-4b3c-9293-f7c0e7b266e5/generations/fd67284d-618f-437f-b2d2-a8bda8122e28/segments/1:4:1/Lucid_Origin_Ultrarealistic_8K_food_photography_of_a_premium_S_0.jpg" alt="Smoked Salmon" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-3xl font-serif font-medium text-white">Smoked Salmon Royale</h4>
+                            <p class="text-sm uppercase tracking-widest text-accent-gold">Salty Heritage</p>
+                            <p class="text-off-white/70">
+                                Hand-sliced, sustainably sourced Atlantic salmon, gently smoked over applewood chips. Served atop a bespoke, charcoal-infused brioche, finished with lemon and dill crème fraîche.
+                            </p>
+                            <p class="text-xl font-serif italic pt-2">— Served on a minimalist white plate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Tea Ritual -->
+        <section id="tea-ritual" class="py-24 md:py-32 max-w-full">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-4xl md:text-6xl font-serif font-extralight mb-4 text-white">
+                    The Tea Ritual
+                </h2>
+                <p class="text-lg font-sans text-off-white/70 mb-12">
+                    Inspired by time and tradition, a tranquil collection of the world's most revered loose-leaf teas.
+                </p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Tea Item 1: Ceremonial Matcha Reserve -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-primary-dark/50 border border-accent-gold/10 hover-lift transition duration-500">
+                        <!-- CHANGED HEIGHT: h-48 to h-80 -->
+                        <div class="h-80 overflow-hidden">
+                            <!-- Vibrant Matcha Bowl -->
+                            <!-- Image URL for Ceremonial Matcha Reserve -->
+                            <img src="https://i.pinimg.com/736x/d8/fa/d0/d8fad083098c675b8b0155b581e6387c.jpg" alt="Matcha Tea" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h4 class="text-2xl font-serif font-medium text-white">Ceremonial Matcha Reserve</h4>
+                            <p class="text-xs uppercase tracking-widest text-accent-gold">Kyoto, Japan</p>
+                            <p class="text-off-white/70 text-sm">
+                                Sourced from the Uji region of Kyoto, this ceremonial-grade matcha is stone-ground weekly to maintain its intense vibrance and umami depth. Prepared with purified water, whisked into a silken froth. An ancient ritual, rec curated for the modern connoisseur.
+                            </p>
+                            <p class="text-base font-serif italic pt-2">— Served in a hand-crafted Raku bowl.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tea Item 2: Silver Needle White Tea -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-primary-dark/50 border border-accent-gold/10 hover-lift transition duration-500">
+                        <!-- CHANGED HEIGHT: h-48 to h-80 -->
+                        <div class="h-80 overflow-hidden">
+                            <!-- Delicate Silver Needle Infusion -->
+                            <!-- IMAGE URL UPDATED HERE -->
+                            <img src="https://i.pinimg.com/736x/0a/9b/c0/0a9bc099a9a9282776638f1ed8292548.jpg" alt="White Tea" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h4 class="text-2xl font-serif font-medium text-white">Silver Needle White</h4>
+                            <p class="text-xs uppercase tracking-widest text-accent-gold">Fujian, China</p>
+                            <p class="text-off-white/70 text-sm">
+                                Comprised only of delicate, unopened tea buds, this white tea is harvested for only two days a year. It yields a light, straw-colored infusion with notes of honeydew and sweet grass. Purity in its most luxurious form.
+                            </p>
+                            <p class="text-base font-serif italic pt-2">— Served with a fine glass infuser.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tea Item 3: The Imperial Puerh -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-primary-dark/50 border border-accent-gold/10 hover-lift transition duration-500">
+                        <!-- CHANGED HEIGHT: h-48 to h-80 -->
+                        <div class="h-80 overflow-hidden">
+                            <!-- Aged Puerh Tea Cake -->
+                            <!-- IMAGE URL UPDATED HERE -->
+                            <img src="https://i.pinimg.com/736x/55/85/09/558509d09299d71496cbc6569f821a4a.jpg" alt="Puerh Tea" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h4 class="text-2xl font-serif font-medium text-white}>The Imperial Puerh</h4>
+                            <p class="text-xs uppercase tracking-widest text-accent-gold">Yunnan, China</p>
+                            <p class="text-off-white/70 text-sm">
+                                Pressed in 2005, this raw Puerh cake has been aged to achieve remarkable depth. Its profile is earthy, deep, and woody, offering a long, clean finish that evolves with every infusion.
+                            </p>
+                            <p class="text-base font-serif italic pt-2">— Brewed in Gongfu style.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tea Item 4: Bergamot Oolong -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-primary-dark/50 border border-accent-gold/10 hover-lift transition duration-500">
+                        <!-- CHANGED HEIGHT: h-48 to h-80 -->
+                        <div class="h-80 overflow-hidden">
+                            <!-- Oolong with Bergamot Peel -->
+                            <!-- UPDATED IMAGE URL FOR BERGAMOT OOLONG -->
+                            <img src="https://i.pinimg.com/736x/cd/52/1a/cd521ac6f545b5d8ea949c9e9712d0a0.jpg" alt="Oolong Tea" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h4 class="text-2xl font-serif font-medium text-white">Bergamot Oolong</h4>
+                            <p class="text-xs uppercase tracking-widest text-accent-gold">Taiwan & Italy</p>
+                            <p class="text-off-white/70 text-sm">
+                                A highly fragrant fusion where a high-mountain Taiwanese Oolong meets the essential oil of Italian Bergamot orange. The result is a smooth, floral, and highly spirited cup, far beyond the traditional Earl Grey.
+                            </p>
+                            <p class="text-base font-serif italic pt-2">— Served with candied orange slivers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artisanal Pastries -->
+        <section id="pastries" class="py-24 md:py-32 bg-primary-dark max-w-full">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-4xl md:text-6xl font-serif font-extralight mb-4 text-accent-gold">
+                    Artisanal Pastries
+                </h2>
+                <p class="text-lg font-sans text-off-white/70 mb-12">
+                    Confectionery elevated to an art form. Each piece is handcrafted using rare, imported elements.
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Pastry Item 1: The Obsidian Truffle Torte -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-body-bg border border-accent-gold/10 hover-lift transition duration-500">
+                        <div class="h-64 overflow-hidden">
+                            <!-- Dark Chocolate Torte with Gold Leaf -->
+                            <img src="https://bakebuddy.in/cdn/shop/files/Kitkat_Chocolate_Truffle_Dream_Cake_53535186-c7a1-4fdf-bd11-0dba85ef65e7.jpg?v=1707847535&width=800" alt="Chocolate Torte" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-3xl font-serif font-medium text-white">The Obsidian Truffle Torte</h4>
+                            <p class="text-sm uppercase tracking-widest text-accent-gold">Signature Confection</p>
+                            <p class="text-off-white/70">
+                                The embodiment of pure darkness. A bespoke, flourless torte exclusively prepared from 85% Amedei Tuscan dark chocolate. Its knot-free consistency and gold leaf finish make it supremely rich. Served with Madagascar vanilla bean crème anglaise.
+                            </p>
+                            <p class="text-xl font-serif italic pt-2">— On a matte-black marble plate.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pastry Item 2: Seasonal Tart Tatin -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-body-bg border border-accent-gold/10 hover-lift transition duration-500">
+                        <div class="h-64 overflow-hidden">
+                            <!-- Caramelized Seasonal Tart Tatin -->
+                            <img src="https://media.istockphoto.com/id/872002584/photo/tarte-tatin.jpg?s=612x612&w=0&k=20&c=iP3jS1HkqKvvi9iYLqm_vBmDIcK-z1WLTHGWrBJrsy0=" alt="Tart Tatin" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-3xl font-serif font-medium text-white">Seasonal Tart Tatin</h4>
+                            <p class="text-sm uppercase tracking-widest text-accent-gold">French Heritage</p>
+                            <p class="text-off-white/70">
+                                A classic French heritage dessert, elevated. Flaky, house-made butter pastry cradles caramelized seasonal fruit, slow-cooked in a reduced Madagascar vanilla bean syrup. A masterpiece of structure and flavour.
+                            </p>
+                            <p class="text-xl font-serif italic pt-2">— Served with Tonka Bean ice cream.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pastry Item 3: Pistachio and Saffron Macaron Assortment -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-body-bg border border-accent-gold/10 hover-lift transition duration-500">
+                        <div class="h-64 overflow-hidden">
+                            <!-- Pistachio Saffron Macarons -->
+                            <img src="https://static.vecteezy.com/system/resources/previews/037/230/000/non_2x/ai-generated-sweet-colorful-macaroons-in-plates-on-the-table-photo.jpeg" alt="Macarons" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-3xl font-serif font-medium text-white">Pistachio and Saffron Macaron Assortment</h4>
+                            <p class="text-sm uppercase tracking-widest text-accent-gold">Delicate Patisserie</p>
+                            <p class="text-off-white/70">
+                                A sophisticated selection of Parisian-style macarons, featuring a vibrant Iranian pistachio shell and a buttercream filling infused with genuine Spanish saffron threads. A subtle crunch gives way to a luxurious, floral center.
+                            </p>
+                            <p class="text-xl font-serif italic pt-2">— Packaged for elegant takeaway.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section (Ambiance) - Naya section joda gaya hai -->
+        <section id="ambiance" class="py-24 md:py-32 max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-serif font-light mb-4 text-white text-center border-b-4 border-accent-gold pb-4 mx-auto max-w-2xl">
+                The Velvet Ambiance
+            </h2>
+            <p class="text-lg font-sans text-off-white/70 mb-12 text-center">
+                A visual journey through our exclusive sanctuary. Details matter.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Item 1: Velvet Seating (Image Source Updated) -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl hover-lift transition duration-500">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/7d/ee/d3/inside-crazy-coffee.jpg?w=200&h=200&s=1" alt="Cozy Velvet Seating Area" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-body-bg/40 opacity-0 group-hover:opacity-100 flex items-end p-6 transition duration-500">
+                        <p class="text-xl font-serif text-accent-gold/90">Seating: Opulence & Comfort</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2: Bar/Coffee Station (Image Source Updated) -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl hover-lift transition duration-500">
+                    <!-- IMAGE URL HAS BEEN UPDATED HERE -->
+                    <img src="https://i.pinimg.com/736x/32/f6/68/32f668b2737a4c035361e29696716da9.jpg" alt="Minimalist Coffee Bar" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-body-bg/40 opacity-0 group-hover:opacity-100 flex items-end p-6 transition duration-500">
+                        <p class="text-xl font-serif text-accent-gold/90">The Alchemist's Station</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3: Delicate Plating Close-up (Image Source Updated) -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl hover-lift transition duration-500">
+                    <!-- NEW IMAGE URL FOR ARTISANAL PLATING -->
+                    <img src="https://thumbs.dreamstime.com/b/master-chef-finishes-gourmet-dish-artistic-plating-fresh-herbs-food-presentation-culinary-skill-creation-artistry-dedication-367504720.jpg" alt="Artisanal Food Plating" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-body-bg/40 opacity-0 group-hover:opacity-100 flex items-end p-6 transition duration-500">
+                        <p class="text-xl font-serif text-accent-gold/90">Plating: The Finishing Touch</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reserve" class="py-24 md:py-32 bg-primary-dark/80 max-w-full">
+            <div class="max-w-xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-4xl md:text-6xl font-serif font-light mb-4 text-accent-gold">
+                    Secure Your Seat
+                </h2>
+                <p class="text-lg font-sans text-off-white/70 mb-12">
+                    Reservations are highly encouraged to ensure your special experience is perfectly accommodated.
+                </p>
+
+                <!-- High-End Booking Form -->
+                <form class="space-y-6" onsubmit="handleReservationSubmit(event)">
+                    <div>
+                        <input type="text" placeholder="Your Name" required class="w-full p-4 bg-body-bg/70 border border-accent-gold/50 rounded-lg text-white font-sans focus:ring-accent-gold focus:border-accent-gold transition duration-300">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email" required class="w-full p-4 bg-body-bg/70 border border-accent-gold/50 rounded-lg text-white font-sans focus:ring-accent-gold focus:border-accent-gold transition duration-300">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="date" required class="w-full p-4 bg-body-bg/70 border border-accent-gold/50 rounded-lg text-white/50 font-sans focus:ring-accent-gold focus:border-accent-gold transition duration-300 appearance-none">
+                        <input type="time" required class="w-full p-4 bg-body-bg/70 border border-accent-gold/50 rounded-lg text-white/50 font-sans focus:ring-accent-gold focus:border-accent-gold transition duration-300 appearance-none">
+                    </div>
+                    <div>
+                        <select required class="w-full p-4 bg-body-bg/70 border border-accent-gold/50 rounded-lg text-white/50 font-sans focus:ring-accent-gold focus:border-accent-gold transition duration-300">
+                            <option value="" disabled selected>Number of Guests</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full p-4 mt-6 text-lg font-medium tracking-widest uppercase bg-accent-gold text-body-bg rounded-lg shadow-xl hover:bg-white hover:text-body-bg transition duration-500 hover-lift">
+                        Confirm Reservation
+                    </button>
+                    <p class="text-xs text-off-white/50 pt-2">
+                        For parties larger than four, please contact our concierge service directly.
+                    </p>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Reservation Dashboard (For Manager/Demo) - Now hidden by default -->
+        <section id="admin-dashboard" class="py-16 md:py-24 max-w-7xl mx-auto px-6 lg:px-8 hidden">
+            <h2 class="text-4xl font-serif font-light mb-8 text-accent-gold text-center border-b border-accent-gold/30 pb-4">
+                Reservation Dashboard (Manager View)
+            </h2>
+            <p class="text-sm text-off-white/60 mb-6 text-center">
+                *This dashboard is currently under active development and is scheduled for release in an upcoming update.*
+            </p>
+            
+            <div id="reservations-list" class="space-y-4">
+                <!-- Reservations will be rendered here by JavaScript -->
+                <p class="text-center text-off-white/50 italic">Loading reservations...</p>
+            </div>
+            
+            <p id="user-info" class="text-xs text-off-white/50 mt-12 text-center"></p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-body-bg border-t border-accent-gold/20 py-12">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-off-white/60 text-sm space-y-4">
+                <p class="text-xl font-serif text-accent-gold/80">The Velvet Bean</p>
+                <p>123 Serene Lane, Artisanal District, The World</p>
+                <p>Concierge: +1 (555) 789-0000 | Inquiries: <a href="mailto:info@velvetbean.com" class="hover:text-accent-gold transition duration-300">curated@velvetbean.com</a></p>
+                <div class="pt-4 text-xs tracking-wider">
+                    &copy; 2025 The Velvet Bean. All rights reserved. Slow Luxury.
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript and Firebase Setup -->
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+            import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+            // NOTE: Added getDocs, deleteDoc, and where for the 31-day cleanup logic
+            import { getFirestore, collection, addDoc, setLogLevel, onSnapshot, query, doc, updateDoc, deleteDoc, getDocs, where } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+            // Firebase Logging (for debugging)
+            setLogLevel('Debug');
+
+            // 1. Firebase Initialization
+            const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+            const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+            
+            // NOTE: In a real application, this MANAGER_ID would be stored securely in a configuration or database.
+            // For this demo, we assume the first authenticated user's ID is the manager.
+            let MANAGER_ID = null;
+
+            let db;
+            let auth;
+            let currentUserId = null;
+            const dashboardEl = document.getElementById('admin-dashboard');
+            const userInfoEl = document.getElementById('user-info');
+            const reservationsListEl = document.getElementById('reservations-list');
+
+
+            if (Object.keys(firebaseConfig).length > 0) {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                // Sign in or use Custom Token and set up listener
+                const signInAndListen = async () => {
+                    try {
+                        if (typeof __initial_auth_token !== 'undefined') {
+                            await signInWithCustomToken(auth, __initial_auth_token);
+                        } else {
+                            await signInAnonymously(auth);
+                        }
+                    } catch (error) {
+                        console.error("Firebase Sign-in error:", error);
+                    }
+                    
+                    // Listen for authentication state changes and fetch data
+                    onAuthStateChanged(auth, (user) => {
+                        if (user) {
+                            currentUserId = user.uid;
+                            
+                            // Set the Manager ID for the first time
+                            if (!MANAGER_ID) {
+                                MANAGER_ID = currentUserId; 
+                                console.log("MANAGER_ID set for this session:", MANAGER_ID);
+                            }
+
+                            userInfoEl.innerHTML = `Current User ID: <span class="text-accent-gold">${currentUserId}</span>. Manager ID is: <span class="text-accent-gold">${MANAGER_ID}</span>.`;
+                            console.log("Firebase Auth Ready. Current User ID:", currentUserId);
+                            
+                            // SECURITY CHECK (Client-Side for Demo): Only show dashboard if user is the manager
+                            if (currentUserId === MANAGER_ID) {
+                                dashboardEl.classList.remove('hidden');
+                                // STEP 3: Manager views the dashboard, trigger cleanup and then display reservations
+                                cleanOldReservations(); 
+                                displayReservations(); 
+                                userInfoEl.innerHTML += `<br><span class="text-green-400">✅ Welcome Manager. You have access to the dashboard.</span>`;
+                            } else {
+                                dashboardEl.classList.add('hidden');
+                                userInfoEl.innerHTML += `<br><span class="text-red-400">❌ You are not the Manager. Dashboard is hidden.</span>`;
+                            }
+
+                        } else {
+                            // If signed out or anonymous sign-in failed
+                            currentUserId = crypto.randomUUID(); // Fallback ID
+                            userInfoEl.textContent = "Error: Authentication failed. Dashboard access denied.";
+                            dashboardEl.classList.add('hidden');
+                            console.warn("User not authenticated. Using fallback ID.");
+                        }
+                    });
+                };
+                signInAndListen();
+            } else {
+                console.error("Firebase configuration is not available.");
+            }
+
+            // 2. Custom Message Box Function
+            // Added an optional duration parameter
+            window.showMessage = (message, isError = false, duration = 5000) => {
+                const messageBox = document.getElementById('message-box');
+                const messageText = document.getElementById('message-text');
+
+                messageText.textContent = message;
+
+                // Show box
+                if (isError) {
+                    // Error (Red)
+                    messageBox.className = 'fixed top-4 right-4 bg-red-800 text-white p-4 rounded-lg shadow-2xl transition-all duration-300 transform translate-x-0 z-[100]';
+                } else {
+                    // Success (Gold/Green)
+                    messageBox.className = 'fixed top-4 right-4 bg-primary-dark border border-accent-gold text-accent-gold p-4 rounded-lg shadow-2xl transition-all duration-300 transform translate-x-0 z-[100]';
+                }
+
+                // Hide box after duration
+                setTimeout(() => {
+                    messageBox.className = 'fixed top-4 right-4 transition-all duration-300 transform translate-x-full z-[100]';
+                }, duration);
+            };
+
+            // STEP 2: Implement Data Cleanup Logic (Runs when Manager logs in)
+            const cleanOldReservations = async () => {
+                if (!db || currentUserId !== MANAGER_ID) {
+                    return; // Only manager can trigger cleanup
+                }
+                
+                // 31 दिन पहले की तारीख़ कैलकुलेट करें (Calculate the cutoff date 31 days ago)
+                const cutoffDate = new Date();
+                cutoffDate.setDate(cutoffDate.getDate() - 31);
+                // ISO String format is used for comparison, matching the saving format
+                const cutoffTimestamp = cutoffDate.toISOString(); 
+
+                const reservationsRef = collection(db, `artifacts/${appId}/public/data/reservations`);
+                
+                // Query उन डॉक्यूमेंट्स के लिए जो cutoffTimestamp से पुराने हैं (Query for documents older than the cutoffTimestamp)
+                const q = query(reservationsRef, where('timestamp', '<', cutoffTimestamp));
+
+                try {
+                    const querySnapshot = await getDocs(q);
+                    let deletedCount = 0;
+                    
+                    const deletePromises = [];
+                    querySnapshot.forEach((document) => {
+                        deletedCount++;
+                        // डॉक्यूमेंट को डिलीट करने के लिए एक Promise जोड़ें (Add a Promise to delete the document)
+                        deletePromises.push(deleteDoc(doc(db, `artifacts/${appId}/public/data/reservations`, document.id)));
+                    });
+
+                    await Promise.all(deletePromises);
+
+                    if (deletedCount > 0) {
+                        console.log(`Cleaned up ${deletedCount} old reservation(s).`);
+                        showMessage(`Cleanup complete. Deleted ${deletedCount} reservations older than 31 days.`, false, 3000); 
+                    } else {
+                         console.log("No old reservations found to clean up.");
+                    }
+
+                } catch (error) {
+                    console.error("Error cleaning old reservations:", error);
+                    // Silent error handling for background task
+                }
+            };
+
+            // 4. Form Submission Handler
+            window.handleReservationSubmit = async (event) => {
+                event.preventDefault();
+
+                if (!db || !currentUserId) {
+                    showMessage("Database is not ready yet. Please wait.", true);
+                    return;
+                }
+
+                const form = event.target;
+                const dateInput = form.querySelector('input[type="date"]');
+                const timeInput = form.querySelector('input[type="time"]');
+
+                const reservationData = {
+                    name: form.querySelector('input[type="text"]').value,
+                    email: form.querySelector('input[type="email"]').value,
+                    date: dateInput.value,
+                    time: timeInput.value,
+                    guests: form.querySelector('select').value,
+                    timestamp: new Date().toISOString(), // This is the field used for 31-day deletion logic
+                    userId: currentUserId, 
+                    status: 'Pending', // New reservations are always Pending initially
+                };
+
+                try {
+                    // Data is saved in the Public Path so all users can see their own booking (if we implemented a 'My Bookings' section) 
+                    // AND the Manager (with read permission) can see all bookings.
+                    const reservationsCollection = collection(db, `artifacts/${appId}/public/data/reservations`);
+                    await addDoc(reservationsCollection, reservationData);
+
+                    showMessage("Reservation confirmed! Your booking has been saved to the database.");
+                    form.reset(); // Clear form on success
+                    // Reset placeholder color after clearing form
+                    dateInput.classList.add('text-white/50');
+                    timeInput.classList.add('text-white/50');
+
+                } catch (error) {
+                    console.error("Error adding reservation:", error);
+                    showMessage("Reservation failed. Please check the console for details.", true);
+                }
+            };
+
+            // 5. Function to change status to Complete
+            window.markAsComplete = async (docId) => {
+                // IMPORTANT: This check is redundant if the dashboard is hidden, but good practice.
+                if (currentUserId !== MANAGER_ID) {
+                    showMessage("Error: Only the Manager can update the status.", true);
+                    return;
+                }
+
+                if (!db || !currentUserId) {
+                    showMessage("Database is not ready. Cannot update status.", true);
+                    return;
+                }
+
+                try {
+                    // Define the document path and reference
+                    const docRef = doc(db, `artifacts/${appId}/public/data/reservations`, docId);
+                    
+                    // Update the status field to 'Complete'
+                    await updateDoc(docRef, {
+                        status: "Complete"
+                    });
+                    
+                    showMessage(`Reservation ID: ${docId} successfully marked as Complete.`);
+                } catch (error) {
+                    console.error("Error updating reservation status:", error);
+                    showMessage("Failed to update status in database.", true);
+                }
+            };
+            
+            // 6. Real-time Reservation Dashboard (Manager View)
+            const renderReservations = (reservations) => {
+                reservationsListEl.innerHTML = ''; // Clear existing list
+                
+                if (reservations.length === 0) {
+                    reservationsListEl.innerHTML = '<p class="text-center text-off-white/50 italic p-4 bg-primary-dark/30 rounded-lg">No reservations found yet.</p>';
+                    return;
+                }
+
+                reservations.forEach((res) => {
+                    const resDate = new Date(`${res.date}T${res.time}`);
+                    
+                    // Format date and time for display
+                    const dateString = resDate.toLocaleDateString('en-IN', {
+                        year: 'numeric', month: 'short', day: 'numeric'
+                    });
+                    const timeString = resDate.toLocaleTimeString('en-IN', {
+                        hour: '2-digit', minute: '2-digit', hour12: true
+                    });
+
+                    // Define the Status Badge styling and text
+                    const isComplete = res.status === 'Complete';
+                    const statusClass = isComplete ? 'bg-green-600/30 text-green-400' : 'bg-accent-gold/30 text-accent-gold';
+                    
+                    // Only show the button if the status is Pending AND the current user is the Manager
+                    const actionButton = !isComplete && (currentUserId === MANAGER_ID) ? `
+                        <button 
+                            onclick="markAsComplete('${res.id}')" 
+                            class="px-4 py-1 text-sm bg-accent-gold text-body-bg rounded-full hover:bg-white hover:text-body-bg transition duration-300 ml-4">
+                            Mark Complete
+                        </button>
+                    ` : '';
+
+
+                    const itemHtml = `
+                        <div class="p-4 bg-primary-dark/50 border border-accent-gold/20 rounded-lg shadow-md flex justify-between items-center transition duration-300 hover:bg-primary-dark/70">
+                            <!-- Left: Details -->
+                            <div class="text-left space-y-1">
+                                <p class="text-xl font-serif text-white">${res.name} (Guests: ${res.guests})</p>
+                                <p class="text-sm text-accent-gold">${dateString} at ${timeString}</p>
+                                <p class="text-xs text-off-white/70">Email: ${res.email}</p>
+                            </div>
+                            <!-- Right: Status & Button -->
+                            <div class="text-right flex items-center">
+                                <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full ${statusClass}">
+                                    ${res.status}
+                                </span>
+                                ${actionButton}
+                            </div>
+                        </div>
+                    `;
+                    reservationsListEl.innerHTML += itemHtml;
+                });
+            };
+
+            const displayReservations = () => {
+                if (!db || currentUserId !== MANAGER_ID) {
+                    console.warn("Cannot fetch reservations: DB not initialized or User is not Manager.");
+                    return;
+                }
+
+                const reservationsCollectionRef = collection(db, `artifacts/${appId}/public/data/reservations`);
+                
+                // Set up real-time listener (onSnapshot)
+                onSnapshot(reservationsCollectionRef, (snapshot) => {
+                    const reservations = [];
+                    snapshot.forEach(doc => {
+                        // Store the document ID with the data
+                        reservations.push({ id: doc.id, ...doc.data() }); 
+                    });
+
+                    // Sort by Date/Time (Ascending - Oldest/Next Reservation first)
+                    reservations.sort((a, b) => {
+                        const dateA = new Date(`${a.date}T${a.time}`);
+                        const dateB = new Date(`${b.date}T${b.time}`);
+                        return dateA - dateB; 
+                    });
+
+                    renderReservations(reservations);
+                }, (error) => {
+                    console.error("Error listening to reservations:", error);
+                    reservationsListEl.innerHTML = '<p class="text-center text-red-500 italic p-4 bg-primary-dark/30 rounded-lg">Error loading database reservations.</p>';
+                });
+            };
+
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId); // Target element ko ID se dhoondho
+
+                    // Check karo ki target element maujood hai ya nahi, tabhi scroll karo
+                    if (targetElement) { 
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // Agar element nahi mila, toh console mein warning do aur user ko message dikhao (Optional)
+                        console.warn(`Attempted to scroll to non-existent section: ${targetId}`);
+                        showMessage(`Sorry, the section '${targetId.substring(1)}' is not yet available.`, true, 3000);
+                    }
+                });
+            });
+        </script>
+</body>
+</html>
